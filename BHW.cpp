@@ -15,10 +15,15 @@ int main()
  
     for(int i=0; i<n; i++)
     for(int j=i+1; j<n; j++)
-    if (a[j]<a[i]) swap(a[i],a[j]);
+    if (a[j]<a[i])
+	{
+		int t=a[i];
+		a[i]=a[j];
+		a[j]=t;
+	}
  
     for(int i=0; i<n; ++i)
-    cout<<a[i]<<" ";
+    printf("%d ",a[i]);
  
     getch();
 }
